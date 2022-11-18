@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Visualisation of heart disease</title>
+</head>
+<body>
+    <section id="NavBar">
+        <nav class="navigation navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #fff" ;>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+              <img class="logo" src="{{url_for('static',filename='Logo.jpg')}}" alt="SSN-logo" width="100" height="100" />
+            </a>
+            <a class="topic" href="#">Visualising and Predicting Heart Disease</a>
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Home Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/visualise">Visualisation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/predict">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log out</a>
+                  </li>
+              </ul>
+            </div>
+            </div>
+        </nav>
+      </section>
+      <div class="container">
+        <section class="about">
+            <h3 class="wel">Welcome to our Project</h3>
+            <p>The leading cause of death in the developed world is Heart disease. Therefore, there needs to be work done to help prevent the risks of having a heart attack or stroke.
+            The aim of this project to use a dataset to predict which patients are most likely to suffer from a heart disease in the near future using the a set of features given. The features include: </p>
+            <div class="list">
+                <ul>
+                    <li>Age</li>
+                    <li>Sex</li>
+                    <li>Chest Pain Type</li>
+                    <li>Blood Pressure</li>
+                    <li>Cholesterol</li>
+                    <li>Fasting Blood Sugar(FBS) Over 120 or not</li>
+                    <li>Cholesterol</li>
+                    <li>EKG Results</li>
+                    <li>Maximum Heart Rate</li>
+                    <li>Exercise Angina</li>
+                    <li>ST Depression</li>
+                    <li>Slope of ST</li>
+                    <li>Number of vessels fluroscopy</li>
+                    <li>Thallium</li>
+                </ul>
+            </div>
+            <p>The model that we are going to use to predict the disease is Logistic Regression. The Training and Testing accuracy was recorded 87 and 83 respectively.</p>
+        </section>
+      </div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+  <title>Visualisations</title>
+</head>
+<body>
+  <div class="visual">
+    <section id="NavBar">
+      <nav class="navigation navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #fff" ;>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home">
+            <img class="logo" src="{{url_for('static',filename='Logo.jpg')}}" alt="SSN-logo" width="100" height="100" />
+          </a>
+          <a class="topic" href="#">Visualising and Predicting Heart Disease</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/home">Home Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/visualise">Visualisation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/predict">Predict</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Log out</a>
+              </li>
+            </ul>
+          </div>
+          </div>
+      </nav>
+    </section>
+    <h3 class="title">Average age for different Chest pain</h3>
+    <img class="imgg" src="{{url_for('static',filename='AgePain.jpeg')}}" alt="">
+  
+    <h3 class="title">Average exercise angina during chest pain</h3>
+    <img class="imgg" src="{{url_for('static',filename='Aginapain.jpeg')}}" alt="">
+  
+    <h3 class="title">Bp variation with respect to age</h3>
+    <img class="imgg" src="{{url_for('static',filename='BPAge.jpeg')}}" alt="">
+  
+    <h3 class="title">Effect of heart disease on Average of Exercise angina</h3>
+    <img class="imgg" src="{{url_for('static',filename='ExericeAngina.jpeg')}}" alt="">
+  
+    <h3 class="title">Average age for different types of heart pain in existing heart disease</h3>
+    <img class="imgg" src="{{url_for('static',filename='Agechestheart.jpeg')}}" alt="">
+  
+    <h3 class="title">Maximum heart rate in existing heart disease by exercise angina</h3>
+    <img class="imgg" src="{{url_for('static',filename='hranginaheart.jpeg')}}" alt="">
+  
+    <h3 class="title">Serum cholesterol vs age</h3>
+    <img class="imgg" src="{{url_for('static',filename='cholesage.jpeg')}}" alt="">
+  </div>
+  
+</body>
+</html>
