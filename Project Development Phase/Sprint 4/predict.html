@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Prediction</title>
+</head>
+<body>
+
+    <section id="NavBar">
+        <nav class="navigation navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #fff" ;>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+              <img class="logo" src="{{url_for('static',filename='Logo.jpg')}}" alt="SSN-logo" width="100" height="100" />
+            </a>
+            <a class="topic" href="#">Visualising and Predicting Heart Disease</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Home Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/visualise">Visualisation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/predict">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log out</a>
+                  </li>
+              </ul>
+            </div>
+            </div>
+        </nav>
+      </section>
+      <div class="login ag">
+        <h3 class="topic">Please Enter the below details</h3>
+        <form action="/predict" method="post">
+            <label class="ll">Age: </label>
+            <input type="text" name="n1">
+            <br>
+            <label class="ll">Sex(0-Male 1-Female): </label>
+            <input type="text" name="n2">
+            <br>
+            <label class="ll">Chest pain type(1-4): </label>
+            <input type="text" name="n3">
+            <br>
+            <label class="ll">BP: </label>
+            <input type="text" name="n4">
+            <br>
+            <label class="ll">Cholesterol: </label>
+            <input type="text" name="n5">
+            <br>
+            <label class="ll">FBS over 120(Yes-1 No-0): </label>
+            <input type="text" name="n6">
+            <br>
+            <label class="ll">EKG results(0 or 2): </label>
+            <input type="text" name="n7">
+            <br>
+            <label class="ll">Max HR: </label>
+            <input type="text" name="n8">
+            <br>
+            <label class="ll">Exercise angina(0 or 1): </label>
+            <input type="text" name="n9">
+            <br>
+            <label class="ll">ST depression(0-6.2): </label>
+            <input type="text" name="n10">
+            <br>
+            <label class="ll">Slope of ST(1 or 2 or 3): </label>
+            <input type="text" name="n11">
+            <br>
+            <label class="ll">Number of vessels fluro(0-3): </label>
+            <input type="text" name="n12">
+            <br>
+            <label class="ll">Thallium(3 or 6 or 7): </label>
+            <input type="text" name="n13">
+            <br>
+            <button class="btn">Predict</button>
+        </form>
+        <p class="ll">Result:  {{result}}</p>
+      </div>
+    
+</body>
+</html>
